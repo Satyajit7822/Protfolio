@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Satyajit Pradhan — Data Analyst Portfolio">
+<title>Satyajit Pradhan | Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#060708;--panel:#0d1012;--panel2:#111518;--text:#f4f7f6;--muted:#929b9a;--line:rgba(255,255,255,.09);--lime:#c9ff4a;--cyan:#57e6d1}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:55px 55px;mask-image:linear-gradient(to bottom,black,transparent 75%)}
+a{text-decoration:none;color:inherit}.wrap{width:min(1180px,calc(100% - 48px));margin:auto}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50;background:rgba(6,7,8,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.logo{font-family:"Space Grotesk";font-size:25px;font-weight:700;letter-spacing:-1.5px}.logo b{color:var(--lime)}
+.navlinks{display:flex;gap:30px}.navlinks a{font-size:13px;color:#aab0af;transition:.25s}.navlinks a:hover{color:var(--lime)}
+.menu{display:none;border:0;background:none;color:white;font-size:24px}
+.hero{min-height:calc(100vh - 78px);display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:55px;padding:85px 0 100px}
+.kicker{display:inline-flex;align-items:center;gap:9px;color:var(--lime);font-size:11px;font-weight:700;letter-spacing:2px}.kicker i{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 16px var(--lime)}
+h1{font-family:"Space Grotesk";font-size:clamp(50px,7vw,86px);line-height:.95;letter-spacing:-5px;margin:20px 0}
+h1 em{font-style:normal;color:transparent;-webkit-text-stroke:1px #e7eeec}
+.hero h2{font-family:"Space Grotesk";font-weight:500;color:#cbd1d0;font-size:clamp(20px,2.6vw,30px);letter-spacing:-1px;max-width:680px}
+.hero p.desc{color:var(--muted);font-size:15px;line-height:1.8;max-width:610px;margin:22px 0 31px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{padding:13px 19px;border-radius:9px;font-size:13px;font-weight:700;border:1px solid var(--line);transition:.25s}
+.btn.primary{background:var(--lime);color:#070908;border-color:var(--lime)}.btn.primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(201,255,74,.15)}
+.btn.ghost:hover{border-color:#555}.socials{display:flex;gap:20px;margin-top:26px;font-size:12px;color:#858d8c}.socials a:hover{color:var(--lime)}
+.visual{position:relative;display:flex;justify-content:center;align-items:center}.orb{position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(201,255,74,.22),transparent 67%);filter:blur(8px)}
+.photo{width:min(420px,84vw);aspect-ratio:4/5;border:1px solid rgba(255,255,255,.14);border-radius:28px;overflow:hidden;position:relative;z-index:2;background:#090a0b;box-shadow:0 35px 100px rgba(0,0,0,.75)}
+.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(145deg,transparent 55%,rgba(201,255,74,.13));mix-blend-mode:screen}
+.photo img{width:100%;height:100%;object-fit:cover}
+.status{position:absolute;z-index:4;left:0;bottom:35px;background:rgba(13,16,18,.9);border:1px solid var(--line);padding:13px 16px;border-radius:12px;backdrop-filter:blur(12px);box-shadow:0 20px 50px #000}.status small{display:block;color:#7f8987;font-size:9px;letter-spacing:1.5px}.status strong{font-size:13px;display:block;margin-top:4px}.status span{color:var(--lime);font-size:11px}
+.section{padding:105px 0}.label{font-size:10px;color:var(--lime);letter-spacing:2px;font-weight:700;margin-bottom:16px}.section-title{font-family:"Space Grotesk";font-size:clamp(34px,4.5vw,52px);letter-spacing:-2.5px;line-height:1.05}.section-title span{color:var(--lime)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:80px}.about-copy{color:var(--muted);font-size:15px;line-height:1.85}.about-copy p+p{margin-top:17px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:35px}.metric{border:1px solid var(--line);background:var(--panel);padding:20px;border-radius:12px}.metric b{font-family:"Space Grotesk";font-size:25px;color:var(--lime)}.metric span{display:block;color:#777;font-size:10px;margin-top:4px}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:40px}.skill{background:linear-gradient(145deg,var(--panel2),#0a0c0e);border:1px solid var(--line);border-radius:15px;padding:25px;transition:.3s}.skill:hover{transform:translateY(-5px);border-color:rgba(201,255,74,.35)}.skill .icon{font-size:22px;margin-bottom:18px}.skill h3{font-family:"Space Grotesk";font-size:18px}.skill p{font-size:11px;color:#737c7a;margin-top:7px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:40px}.project{position:relative;overflow:hidden;border:1px solid var(--line);background:var(--panel);padding:31px;border-radius:17px;min-height:265px;transition:.3s}.project:hover{transform:translateY(-5px);border-color:rgba(201,255,74,.28)}.project:before{content:"";position:absolute;width:180px;height:180px;right:-90px;top:-90px;border-radius:50%;background:rgba(87,230,209,.08)}
+.num{font-size:10px;color:#5e6765;letter-spacing:1px}.project h3{font-family:"Space Grotesk";font-size:23px;margin:20px 0 10px}.project p{font-size:13px;line-height:1.7;color:#808987;max-width:530px}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:23px}.tags span{font-size:9px;color:#aeb5b3;border:1px solid #252c2b;padding:6px 8px;border-radius:6px}
+.timeline{margin-top:40px;border-top:1px solid var(--line)}.item{display:grid;grid-template-columns:160px 1fr;gap:35px;padding:28px 0;border-bottom:1px solid var(--line)}.item .year{color:var(--lime);font-size:11px;letter-spacing:1px}.item h3{font-family:"Space Grotesk";font-size:20px}.item p{font-size:13px;color:#7e8785;margin-top:7px;max-width:700px}
+.edu{border:1px solid var(--line);background:linear-gradient(120deg,var(--panel),#0a0d0f);padding:30px;border-radius:17px;display:flex;justify-content:space-between;align-items:center}.edu h3{font-family:"Space Grotesk";font-size:24px;margin:7px 0}.edu p{color:#7e8785;font-size:13px}.badge{color:var(--lime);border:1px solid rgba(201,255,74,.25);border-radius:8px;padding:10px 12px;font-size:11px}
+.contact{position:relative;padding-bottom:125px}.contact-box{border:1px solid var(--line);border-radius:22px;background:radial-gradient(circle at 85% 20%,rgba(201,255,74,.09),transparent 30%),var(--panel);padding:55px}.contact h2{font-family:"Space Grotesk";font-size:clamp(42px,6vw,72px);letter-spacing:-4px;line-height:1}.contact h2 span{color:var(--lime)}.contact p{color:#818a88;margin:18px 0 30px;font-size:14px}.contact-links{display:flex;gap:12px;flex-wrap:wrap}.contact-links a{border:1px solid var(--line);padding:11px 14px;border-radius:8px;font-size:12px}.contact-links a:hover{border-color:var(--lime);color:var(--lime)}
+footer{border-top:1px solid var(--line);padding:25px 0;color:#555;font-size:10px;display:flex;justify-content:space-between}
+@media(max-width:800px){.wrap{width:min(100% - 36px,600px)}.nav{height:70px}.navlinks{display:none;position:absolute;top:70px;left:0;right:0;padding:22px 20px;background:#070809;border-bottom:1px solid var(--line);flex-direction:column;gap:18px}.navlinks.open{display:flex}.menu{display:block}.hero{grid-template-columns:1fr;padding:65px 0 80px}.visual{order:-1}.photo{width:min(320px,80vw)}.status{left:5%}.about{grid-template-columns:1fr;gap:28px}.skills{grid-template-columns:1fr 1fr}.projects{grid-template-columns:1fr}.item{grid-template-columns:90px 1fr;gap:15px}.edu{align-items:flex-start;gap:20px}.edu h3{font-size:19px}.contact-box{padding:35px 25px}footer{gap:15px;flex-direction:column}}
+@media(max-width:480px){h1{letter-spacing:-3px}.skills{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr}.metric:last-child{grid-column:span 2}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;width:100%">
+    <a class="logo" href="#home">SATYAJIT<b>.</b></a>
+    <button class="menu">☰</button>
+    <nav class="navlinks">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<section class="hero" id="home">
+  <div>
+    <div class="kicker"><i></i> DATA ANALYST · BHUBANESWAR</div>
+    <h1>Data that tells<br><em>a better story.</em></h1>
+    <h2>Turning raw data into decisions, dashboards and insights.</h2>
+    <p class="desc">Computer Science graduate focused on Data Analytics, with practical experience in SQL, Excel, Power BI, Tableau and Python-based exploratory analysis.</p>
+    <div class="actions"><a class="btn primary" href="#projects">Explore My Work ↓</a><a class="btn ghost" href="#contact">Get In Touch</a></div>
+    <div class="socials"><a href="https://github.com/Satyajit7822" target="_blank">GitHub ↗</a><a href="https://www.linkedin.com/in/satyajitpradhan-21x04x07/" target="_blank">LinkedIn ↗</a></div>
+  </div>
+  <div class="visual">
+    <div class="orb"></div><div class="photo"><img src="profile.jpg" alt="Satyajit Pradhan"></div>
+    <div class="status"><small>CURRENT FOCUS</small><strong>Data Analytics</strong><span>SQL · BI · EDA</span></div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="label">01 / ABOUT</div>
+  <div class="about">
+    <div><h2 class="section-title">Analytical thinking.<br><span>Practical execution.</span></h2></div>
+    <div class="about-copy"><p>I am a Computer Science graduate building my career in Data Analytics. I enjoy transforming messy datasets into structured information and communicating findings through clear visualizations.</p><p>My work includes relational database projects, analytical SQL, dashboards and exploratory data analysis. I am continuously building practical projects to strengthen my technical and business understanding.</p></div>
+  </div>
+  <div class="metrics"><div class="metric"><b>SQL</b><span>Analytical Queries</span></div><div class="metric"><b>BI</b><span>Dashboard Development</span></div><div class="metric"><b>EDA</b><span>Python Analysis</span></div></div>
+</section>
+
+<section class="section" id="skills">
+  <div class="label">02 / TOOLKIT</div><h2 class="section-title">Skills built for <span>analysis.</span></h2>
+  <div class="skills">
+    <div class="skill"><div class="icon">⌘</div><h3>SQL & MySQL</h3><p>Joins · CTEs · Subqueries · Window Functions · Views</p></div>
+    <div class="skill"><div class="icon">▦</div><h3>Power BI</h3><p>Dashboards · DAX · Data Modeling · Visualization</p></div>
+    <div class="skill"><div class="icon">▤</div><h3>Excel</h3><p>Functions · Data Analysis · Reporting · Dashboards</p></div>
+    <div class="skill"><div class="icon">◉</div><h3>Python</h3><p>Pandas · NumPy · Data Cleaning · EDA</p></div>
+    <div class="skill"><div class="icon">◈</div><h3>Tableau</h3><p>Visual Analytics · Interactive Dashboards</p></div>
+    <div class="skill"><div class="icon">⌗</div><h3>GitHub</h3><p>Project Documentation · Version Control</p></div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="label">03 / SELECTED WORK</div><h2 class="section-title">Projects with a <span>purpose.</span></h2>
+  <div class="projects">
+    <article class="project"><div class="num">PROJECT 01</div><h3>Vehicle CO₂ Emissions — EDA</h3><p>Exploratory analysis of vehicle specifications, fuel consumption, fuel types and CO₂ emissions using Python.</p><div class="tags"><span>Python</span><span>Pandas</span><span>EDA</span><span>Visualization</span></div></article>
+    <article class="project"><div class="num">PROJECT 02</div><h3>ApexGP Racing Database</h3><p>Relational MySQL database system covering racing entities, relationships and analytical SQL queries.</p><div class="tags"><span>MySQL</span><span>SQL</span><span>ERD</span><span>Database</span></div></article>
+    <article class="project"><div class="num">PROJECT 03</div><h3>Metro Transit Database</h3><p>Database design and SQL analysis for a metro transit system using joins, aggregation and business queries.</p><div class="tags"><span>SQL</span><span>MySQL</span><span>Analytics</span></div></article>
+    <article class="project"><div class="num">PROJECT 04</div><h3>Movies SQL Practice</h3><p>Structured SQL practice covering filtering, joins, grouping, subqueries and advanced analytical queries.</p><div class="tags"><span>SQL</span><span>CTE</span><span>Windows</span><span>Analysis</span></div></article>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="label">04 / EXPERIENCE</div><h2 class="section-title">Where I’ve <span>worked.</span></h2>
+  <div class="timeline">
+    <div class="item"><div class="year">2025</div><div><h3>Front-End Development Intern — Pinnacle Labs</h3><p>Developed a responsive portfolio website, calculator and e-commerce prototype using HTML, CSS and JavaScript.</p></div></div>
+    <div class="item"><div class="year">2024</div><div><h3>Web Developer Intern — IFFCO</h3><p>Worked on responsive web interfaces, feature implementation, debugging, testing and version control.</p></div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="label">05 / EDUCATION</div>
+  <div class="edu"><div><div class="label" style="margin:0">B.TECH · COMPUTER SCIENCE & ENGINEERING</div><h3>Kalinga Institute of Industrial Technology (KIIT)</h3><p>Bhubaneswar, Odisha, India</p></div><div class="badge">CSE</div></div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="contact-box"><div class="label">06 / CONTACT</div><h2>Let’s work<br><span>with data.</span></h2><p>Open to Data Analyst and Data Analytics opportunities.</p>
+  <div class="contact-links"><a href="mailto:pradhansatyajit182@gmail.com">✉ pradhansatyajit182@gmail.com</a><a href="https://www.linkedin.com/in/satyajitpradhan-21x04x07/" target="_blank">LinkedIn ↗</a><a href="https://github.com/Satyajit7822" target="_blank">GitHub ↗</a></div></div>
+</section>
+</main>
+<footer class="wrap"><span>© 2026 Satyajit Pradhan</span><span>Designed for Data Analytics</span></footer>
+<script>
+const menu=document.querySelector('.menu'),links=document.querySelector('.navlinks');
+menu.addEventListener('click',()=>links.classList.toggle('open'));
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+</script>
+</body>
+</html>
